@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "Pick-A-Block.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
@@ -12,6 +13,7 @@
           "value" : "dark"
         }
       ],
+      "filename" : "Pick-A-Block 1.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
@@ -23,6 +25,7 @@
           "value" : "tinted"
         }
       ],
+      "filename" : "Pick-A-Block 2.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
