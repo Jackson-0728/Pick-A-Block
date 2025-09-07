@@ -64,8 +64,8 @@ struct ConfettiView: View {
 struct ContentView: View {
     @State private var pickedNumber: Int? = nil
     @State private var colors: [String] = ["Gray", "Dark Blue", "Light Blue", "Green", "Black", "Yellow", "Purple"]
-    @State private var numberofcolor: ClosedRange<Int> = 0...6
-//    @State private var currentnumber: Int? = 6
+    @State private var numberOfColor: ClosedRange<Int> = 0...6
+    @State private var currentNumber: Int = 0
     @State private var pickedColor: String? = nil
     
     @State private var showConfetti: Bool = false
@@ -84,8 +84,9 @@ struct ContentView: View {
     }
     
     func pickColorAndAnimate() {
-        pickedNumber = Int.random(in: numberofcolor)
+        pickedNumber = Int.random(in: numberOfColor)
         pickedColor = colors[pickedNumber!]
+        
 //        showConfetti = true
 //        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
 //            showConfetti = false
