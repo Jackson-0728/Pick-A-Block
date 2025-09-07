@@ -63,8 +63,9 @@ struct ConfettiView: View {
 
 struct ContentView: View {
     @State private var pickedNumber: Int? = nil
-    @State private var colors: [String] = ["Gray", "Dark Blue", "Light Blue", "Green", "Black", "Yellow", "System Blue"]
+    @State private var colors: [String] = ["Gray", "Dark Blue", "Light Blue", "Green", "Black", "Yellow", "Purple"]
     @State private var numberofcolor: ClosedRange<Int> = 0...6
+//    @State private var currentnumber: Int? = 6
     @State private var pickedColor: String? = nil
     
     @State private var showConfetti: Bool = false
@@ -72,12 +73,12 @@ struct ContentView: View {
     func color(for name: String) -> Color {
         switch name.lowercased() {
         case "gray": return .gray
-        case "dark blue": return Color(red: 0.2, green: 0.2, blue: 0.6)
-        case "light blue": return Color(red: 0.6, green: 0.8, blue: 1.0)
+        case "dark blue": return Color(red: 0.0, green: 0.01, blue: 0.9)
+        case "light blue": return .cyan
         case "green": return .green
         case "black": return .black
         case "yellow": return .yellow
-        case "system blue": return .blue
+        case "purple": return Color(red: 157/255.0, green: 0/255.0, blue: 255/255.0)
         default: return .white
         }
     }
@@ -85,10 +86,10 @@ struct ContentView: View {
     func pickColorAndAnimate() {
         pickedNumber = Int.random(in: numberofcolor)
         pickedColor = colors[pickedNumber!]
-        showConfetti = true
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            showConfetti = false
-        }
+//        showConfetti = true
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+//            showConfetti = false
+//        }
     }
     
     var body: some View {
@@ -97,8 +98,6 @@ struct ContentView: View {
                 color(for: colorName)
                     .ignoresSafeArea()
                     .animation(.easeInOut(duration: 0.5), value: pickedColor)
-            } else {
-                Color.white.ignoresSafeArea()
             }
             
             VStack(spacing: 24) {
@@ -112,11 +111,11 @@ struct ContentView: View {
             }
             .padding()
 
-            if showConfetti {
-                ConfettiView()
-                    .transition(.opacity)
-                    .zIndex(1)
-            }
+//            if showConfetti {
+//                ConfettiView()
+//                    .transition(.opacity)
+//                    .zIndex(1)
+//            }
         }
         .contentShape(Rectangle())
         .onTapGesture {
