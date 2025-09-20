@@ -32,20 +32,23 @@ struct ContentView: View {
     @State private var alertTitle = "Order Complete - 2"
     
     var body: some View {
-        VStack{
-            Image("Banner")
-                .resizable()
-                .aspectRatio(contentMode: .fit)                .offset(x: 0, y: -50)
-            ZStack {
-                FortuneWheel(titles: colors, size: 320,
-                             onSpinEnd: onSpinEnd,
-                             colors: hexColors)
-                
-                             //                         getWheelItemIndex: getWheelItemIndex
+        ZStack {
+            VStack{
+                Image("Banner")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)                .offset(x: 0, y: -50)
+                ZStack {
+                    FortuneWheel(titles: colors, size: 320,
+                                 onSpinEnd: onSpinEnd,
+                                 colors: hexColors)
+                }
+                //                         getWheelItemIndex: getWheelItemIndex
             }
-        }.alert(isPresented: $isPresented) {
-            Alert(title: Text(alertTitle),
-                  dismissButton: .default(Text("OK")))
+            if isPresented {
+                CustomDialog(isActive: $isPresented, title: "Access photos?", message: "This lets you choose which photos you want to add to this project.", buttonTitle: "Give Access") {
+                    print("Pass to viewModel")
+                }
+            }
         }
     }
 
