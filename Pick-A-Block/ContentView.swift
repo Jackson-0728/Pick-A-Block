@@ -19,11 +19,11 @@ extension Color {
 struct ContentView: View {
     
     private let hexColors: [Color] = [
-        Color(hex: "3F8BBD"),
+        Color(hex: "00B9FF"),
         Color(hex: "20407A"),
-        Color(hex: "CBB743"),
-        Color(hex: "65588A"),
-        Color(hex: "227D51"),
+        Color(hex: "FFF112"),
+        Color(hex: "BB82FF"),
+        Color(hex: "31B554"),
         Color(hex: "222222"),
         Color(hex: "5B5B5B")
     ]
