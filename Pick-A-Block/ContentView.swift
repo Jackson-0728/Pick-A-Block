@@ -28,13 +28,10 @@ struct ContentView: View {
         Color(hex: "5B5B5B")
     ]
     private var colors = ["Light Blue", "Dark Blue", "Yellow", "Purple", "Green", "Black", "Grey"]
+    @State private var isPresented = false
+    @State private var alertTitle = "Order Complete - 2"
     
     var body: some View {
-//        let model = FortuneWheelModel(
-//            titles: players, size: 320,
-//            onSpinEnd: onSpinEnd,
-//            getWheelItemIndex: getWheelItemIndex
-//        )
         VStack{
             Image("Banner")
                 .resizable()
@@ -46,11 +43,17 @@ struct ContentView: View {
                 
                              //                         getWheelItemIndex: getWheelItemIndex
             }
+        }.alert(isPresented: $isPresented) {
+            Alert(title: Text(alertTitle),
+                  message: Text("Thank you for shopping with us."),
+                  dismissButton: .default(Text("OK")))
         }
     }
 
     private func onSpinEnd(index: Int) {
+        alertTitle = "The index is: \(index)"
         // your action here - based on index
+        isPresented = true
     }
 
 //    private func getWheelItemIndex() -> Int {
