@@ -45,7 +45,7 @@ struct ContentView: View {
                 //                         getWheelItemIndex: getWheelItemIndex
             }
             if isPresented {
-                CustomDialog(isActive: $isPresented, title: "Access photos?", message: "This lets you choose which photos you want to add to this project.", buttonTitle: "Give Access") {
+                CustomDialog(isActive: $isPresented, title: "You've picked a color!", message: "\(alertTitle)", buttonTitle: "Ok") {
                     print("Pass to viewModel")
                 }
             }
