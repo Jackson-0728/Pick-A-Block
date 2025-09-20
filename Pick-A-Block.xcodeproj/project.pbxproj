@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		DD03D8152E7E58D600BA107C /* FortuneWheel in Frameworks */ = {isa = PBXBuildFile; productRef = DD03D8142E7E58D600BA107C /* FortuneWheel */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		7829E5052E6406B10087821D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD03D8152E7E58D600BA107C /* FortuneWheel in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +117,7 @@
 			);
 			name = "Pick-A-Block";
 			packageProductDependencies = (
+				DD03D8142E7E58D600BA107C /* FortuneWheel */,
 			);
 			productName = "Pick-A-Block";
 			productReference = 7829E4F72E6406AE0087821D /* Pick-A-Block.app */;
@@ -195,6 +201,9 @@
 			);
 			mainGroup = 7829E4EE2E6406AD0087821D;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				DD03D8132E7E58D600BA107C /* XCRemoteSwiftPackageReference "FortuneWheel" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 7829E4F82E6406AE0087821D /* Products */;
 			projectDirPath = "";
@@ -613,6 +622,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DD03D8132E7E58D600BA107C /* XCRemoteSwiftPackageReference "FortuneWheel" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sameersyd/FortuneWheel.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DD03D8142E7E58D600BA107C /* FortuneWheel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD03D8132E7E58D600BA107C /* XCRemoteSwiftPackageReference "FortuneWheel" */;
+			productName = FortuneWheel;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7829E4EF2E6406AE0087821D /* Project object */;
 }
