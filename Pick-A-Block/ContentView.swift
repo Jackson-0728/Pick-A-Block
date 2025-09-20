@@ -4,6 +4,7 @@ import FortuneWheel
 struct ContentView: View {
 
     private var players = ["Sameer", "Spikey", "Amelia", "Danny", "Karen", "Kathy"]
+    private var colors = ["#3F8BBD", "#20407A", "#CBB743", "#65588A", "#227D51", "#222", "#5B5B5B"]
     
     var body: some View {
 //        let model = FortuneWheelModel(
