@@ -36,9 +36,9 @@ struct ContentView: View {
 //            getWheelItemIndex: getWheelItemIndex
 //        )
         VStack{
-            Text("Pick-A-Block")
-                .font(.title)
-                .padding()
+            Image("Banner")
+                .resizable()
+                .aspectRatio(contentMode: .fit)                .offset(x: 0, y: -50)
             ZStack {
                 FortuneWheel(titles: colors, size: 320,
                              onSpinEnd: onSpinEnd,
