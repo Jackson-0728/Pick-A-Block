@@ -34,7 +34,7 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             VStack{
-                Image("Banner")
+                Image("Smiggle Banner")
                     .resizable()
                     .aspectRatio(contentMode: .fit)                .offset(x: 0, y: -50)
                 ZStack {
