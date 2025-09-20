@@ -45,13 +45,12 @@ struct ContentView: View {
             }
         }.alert(isPresented: $isPresented) {
             Alert(title: Text(alertTitle),
-                  message: Text("Thank you for shopping with us."),
                   dismissButton: .default(Text("OK")))
         }
     }
 
     private func onSpinEnd(index: Int) {
-        alertTitle = "The index is: \(index)"
+        alertTitle = "The color you picked is: \(colors[index])"
         // your action here - based on index
         isPresented = true
     }
@@ -59,4 +58,6 @@ struct ContentView: View {
 //    private func getWheelItemIndex() -> Int {
 //        return getIndexFromAPI()
 //    }
+    
+    
 }
